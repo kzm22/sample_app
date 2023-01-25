@@ -1,10 +1,10 @@
 <div class="list-wrap">
-  <% @lists.ease do |list| %>
+  <% @lists.each do |list| %>
     <div class= "list-box">
       <% if list.image.attached? %>
         <%= image_tag list.image, size: "200x200" %>
       <% else %>
-        <%= image_tag 'no-image', size: "200x200" %>
+        <%= image_tag 'no_image', size: "200x200" %>
       <% end %>
       <div class="list-comment">
         <span class="list-body"><%= list.body %></span>
